@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b0f">
+  <meta name="description" content="Aromas IG: descubre tu próximo perfume en decants de 2 ml, 5 ml y 10 ml.">
+  <title>Aromas IG — Perfumes en decants</title>
+  <link rel="icon" href="aromas-ig-logo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir al catálogo</a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Aromas IG, inicio">
+      <span class="logo-window"><img src="aromas-ig-logo.jpeg" alt="Logo Aromas IG" width="653" height="605"></span>
+      <span>AROMAS <b>IG</b></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a class="active" href="#catalogo">Catálogo</a>
+      <a href="#formatos">Formatos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+    </nav>
+    <button id="open-cart" class="secondary-button" type="button">Carrito <span id="cart-count">0</span></button>
+    <button class="icon-button menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+  </header>
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#formatos">Formatos</a>
+    <a href="#como-funciona">Cómo funciona</a>
+  </div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <img src="decants-hero.png" alt="Tres atomizadores decant con perfume ámbar sobre una superficie oscura" width="1672" height="941">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Perfumes originales · En formato decant</span>
+        <h1>Tu próximo aroma<br><em>no se elige a ciegas.</em></h1>
+        <p>Prueba fragancias icónicas en 2, 5 o 10 ml. Llévalas contigo y descubre cuál realmente va contigo.</p>
+        <a class="primary-button" href="#catalogo">Explorar perfumes <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-stat" aria-label="Formatos disponibles">
+        <span>Formatos</span>
+        <strong>02 / 05 / 10 <small>ml</small></strong>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Encuentra tu perfil</span>
+          <h2>Catálogo</h2>
+        </div>
+        <p>Tu perfume, en 2, 5 y 10 ml. Precios de demostración para probar el carrito; las fotos muestran los frascos originales de referencia.</p>
+      </div>
+
+      <div class="catalog-toolbar" aria-label="Filtros del catálogo">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Buscar perfume</span>
+          <input id="search" type="search" placeholder="Buscar perfume o marca…" autocomplete="off">
+        </label>
+        <div class="family-filters" role="group" aria-label="Filtrar por familia aromática">
+          <button class="filter-chip active" type="button" data-family="all" aria-pressed="true">Todos</button>
+          <button class="filter-chip" type="button" data-family="fresco" aria-pressed="false">Frescos</button>
+          <button class="filter-chip" type="button" data-family="tropical" aria-pressed="false">Tropicales</button>
+          <button class="filter-chip" type="button" data-family="gourmand" aria-pressed="false">Dulces</button>
+        </div>
+        <label class="size-select">
+          <span class="sr-only">Filtrar por formato</span>
+          <select id="size-filter">
+            <option value="all">Todos los tamaños</option>
+            <option value="2">2 ml</option>
+            <option value="5">5 ml</option>
+            <option value="10">10 ml</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="results-line" aria-live="polite"><span id="result-count">12 perfumes</span><span>Orden: destacados</span></div>
+      <div id="product-grid" class="product-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <span>Sin coincidencias</span>
+        <h3>Ese aroma todavía no aparece.</h3>
+        <p>Prueba con otra marca, familia o tamaño.</p>
+        <button type="button" id="clear-filters" class="secondary-button">Limpiar filtros</button>
+      </div>
+    </section>
+
+    <section class="formats-section" id="formatos">
+      <div class="formats-copy">
+        <span class="eyebrow">Elige cuánto probar</span>
+        <h2>Un formato para cada plan.</h2>
+        <p>Todos nuestros decants se preparan en atomizadores recargables y fáciles de llevar.</p>
+      </div>
+      <div class="format-list">
+        <article><span>01</span><strong>2 ml</strong><p>Para descubrir</p><small>≈ 25 atomizaciones</small></article>
+        <article class="featured"><span>02</span><strong>5 ml</strong><p>Para conocerlo bien</p><small>≈ 65 atomizaciones</small><b>Favorito</b></article>
+        <article><span>03</span><strong>10 ml</strong><p>Para llevar siempre</p><small>≈ 130 atomizaciones</small></article>
+      </div>
+    </section>
+
+    <section class="steps-section" id="como-funciona">
+      <span class="eyebrow">Simple y directo</span>
+      <h2>De la curiosidad a tu piel.</h2>
+      <div class="steps">
+        <article><span>01</span><h3>Explora</h3><p>Filtra por estilo y conoce las notas de cada perfume.</p></article>
+        <article><span>02</span><h3>Elige formato</h3><p>Prueba poco o llévate suficiente para varias semanas.</p></article>
+        <article><span>03</span><h3>Consulta</h3><p>Confirma disponibilidad y coordina tu pedido.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#inicio" aria-label="Aromas IG, inicio"><span class="logo-window"><img src="aromas-ig-logo.jpeg" alt="Logo Aromas IG" width="653" height="605"></span><span>AROMAS <b>IG</b></span></a>
+    <p>Perfumes originales, nuevas formas de descubrirlos.</p>
+    <span>Catálogo inicial · Chile</span>
+  </footer>
+
+  <dialog id="product-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar detalle">×</button>
+    <div id="dialog-art" class="dialog-art"></div>
+    <div class="dialog-content">
+      <span id="dialog-brand" class="eyebrow"></span>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description" class="dialog-description"></p>
+      <div class="note-block"><span>Notas principales</span><div id="dialog-notes" class="notes"></div></div>
+      <div class="detail-row"><span>Familia</span><strong id="dialog-family"></strong></div>
+      <div class="detail-row"><span>Mejor momento</span><strong id="dialog-occasion"></strong></div>
+      <div class="dialog-size-label">Elige un formato</div>
+      <div id="dialog-sizes" class="dialog-sizes"></div>
+      <div class="dialog-total"><span>Valor referencial</span><strong id="dialog-price"></strong></div>
+      <label class="quantity-label" for="product-quantity">Cantidad</label>
+      <input id="product-quantity" type="number" min="1" max="99" step="1" value="1" inputmode="numeric" required>
+      <button class="primary-button full" type="button" id="availability-button">Añadir al carrito</button>
+      <p class="demo-note">Confirma precios y disponibilidad al hacer tu pedido por WhatsApp.</p>
+    </div>
+  </dialog>
+
+  <dialog id="cart-dialog" aria-labelledby="cart-title">
+    <button id="close-cart" class="dialog-close" type="button" aria-label="Cerrar carrito">×</button>
+    <h2 id="cart-title">Tu carrito</h2>
+    <div id="cart-lines"></div>
+    <div class="dialog-total"><span>Total de productos</span><strong id="cart-total"></strong></div>
+    <p id="cart-price-note">Precios y total a pagar por confirmar con Aromas IG.</p>
+    <button id="place-order" class="primary-button full" type="button">Hacer pedido</button>
+    <p class="demo-note">Se abrirá WhatsApp al +56 9 8820 7686 con el resumen. Revisa el mensaje y pulsa Enviar. Envío y disponibilidad se coordinan por WhatsApp.</p>
+    <button id="continue-shopping" class="secondary-button" type="button">Seguir explorando</button>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="cart-core.js"></script>
+  <script src="app.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
